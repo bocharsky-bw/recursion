@@ -6,7 +6,7 @@ include __DIR__ .'/../recursive.php'; // Подключение рекурсив
 //print_r($items); die;
 
 // Вызов рекурсивной функции
-$recursion = new Recursion;
+$recursion = new \BW\Helpers\Recursion;
 $result = $recursion->levelParentRecursion($data);
 
 /* Dump */
