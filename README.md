@@ -8,10 +8,10 @@ Multi-array generation in controller
 ``` php
 public function menuAction($id) {
     // ...
-    // your code for get items array from DB
+    // your code for get items in common php array from DB
 
-    $recursion = new \BW\Helpers\Recursion\Recursion;
-    $items = $recursion->levelParentRecursion($items);
+    $recursion = new \BW\MenuBundle\Service\Recursion();
+    $data->items = $recursion->levelParentEntityRecursion($items);
 
     return $this->render('BWMenuBundle:Menu:list-menu.html.twig', array('items' => $items));
 }
